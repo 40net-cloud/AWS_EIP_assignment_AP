@@ -15,7 +15,7 @@ variable "public_private_ips" {
 }
 ```
 ## 2. Computing Metadata for Private IPs
-A local variable eni_private_ips is calculated to generate additional metadata for each private IP (such as its index and corresponding NIC index) using the flatten() function. This allows us to manage the IPs in a flattened structure for easier processing.
+A local variable `eni_private_ips` is calculated to generate additional metadata for each private IP (such as its index and corresponding NIC index) using the flatten() function. This allows us to manage the IPs in a flattened structure for easier processing.
 
 ```
 locals {
