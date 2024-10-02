@@ -33,7 +33,7 @@ locals {
 ```
 ## 3. Creating AWS Network Interfaces (ENIs)
 
-We create three AWS ENIs (network interfaces), each with a set of 20 private IP addresses assigned. The count parameter is used to ensure that the right number of ENIs are created, and each ENI gets its respective private IP list.
+We create 3 AWS ENIs (network interfaces) in this example, each with a set of 20 private IP addresses assigned. The count parameter is used to ensure that the right number of ENIs are created, and each ENI gets its respective private IP list.
 
 ```
 resource "aws_network_interface" "public_eni" {
