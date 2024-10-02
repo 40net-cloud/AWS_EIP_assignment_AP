@@ -18,7 +18,7 @@ variable "az2" {
 // IAM role that has proper permission for HA
 // Refer to the URL For details. https://docs.fortinet.com/document/fortigate-public-cloud/7.2.0/aws-administration-guide/229470/deploying-fortigate-vm-active-passive-ha-aws-between-multiple-zones
 variable "iam" {
-  default = "Fortigate-me" //Put in the IAM Role name created
+  default = "<ROLE>" //Put in the IAM Role name created
 }
 
 variable "vpccidr" {
@@ -382,7 +382,7 @@ variable "fgtami" {
 
 //  Existing SSH Key on the AWS 
 variable "keyname" {
-  default = "jumpbox-kp1"
+  default = "<SSH_KEY>"
 }
 
 // HTTPS access port
