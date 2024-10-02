@@ -1,6 +1,9 @@
 # Terraform Logic Explanation
 ## 1. Defining Private IPs for Network Interfaces
-We define a list of private IPs for each network interface card (NIC) using the public_private_ips variable. Each list within this variable contains 20 private IPs for a specific NIC. For example:
+We define a list of private IPs for each network interface card (NIC) using the public_private_ips variable. <br>
+Each list within this variable contains 20 private IPs for a specific NIC. <br>
+Note: You can add another list for an additional interface, or increase the number of IP addresses per NIC. <br>
+For example:
 ```
 variable "public_private_ips" {
   type = list(list(string))
