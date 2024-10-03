@@ -117,3 +117,15 @@ resource "aws_network_interface" "public_eni_2" {
   private_ips  = var.public_private_ips_2[count.index]
 }
 
+# Output the maps of ENI private IPs
+output "eni_private_ips_map" {
+  value = {
+    for val in local.eni_private_ips : "${val.eni_index}-${val.private_ip}" => val
+  }
+}
+
+output "eni_private_ips_2_map" {
+  value = {
+    for val in local.eni_private_ips_2 : "${val.eni_index}-${val.private_ip}" => val
+  }
+}
